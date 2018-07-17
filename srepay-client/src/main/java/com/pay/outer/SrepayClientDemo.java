@@ -75,7 +75,7 @@ public class SrepayClientDemo {
 	public void queryTransInfoUrl() throws Exception {
 
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("requestId", "139277b4-8e67-41f0-a11d-9117486aa332111");
+		map.put("requestId", "1019045178585690114");
 		map.put("agentNo", "8620805971");
 		map.put("sign", generateSign(map));
 
@@ -227,9 +227,9 @@ public class SrepayClientDemo {
 		/**
 		 * 1017315126730891265 1018768881217302530
 		 */
-		map.put("registId", "1017315126730891265");//1011847073964548098
+		map.put("registId", "1011847073964548098");//1011847073964548098
+		map.put("cardId", "1007212212750495746");//1007212212750495746
 		map.put("agentNo", "8620805971");
-		map.put("cardId", "1018768881217302530");//1007212212750495746
 		map.put("transAmount", "0.01");
 		map.put("deviceId", "deviceID001");
 		map.put("deviceType", "PAD");
@@ -264,12 +264,14 @@ public class SrepayClientDemo {
 
 	@Test
 	public void remoteRemit() throws Exception {
-
+		/**
+		 * 1017315126730891265 1018768881217302530
+		 */
 		Map<String, String> map = new HashMap<>();
 		map.put("requestId", UUID.randomUUID().toString());
-		map.put("registId", "1017315126730891265");
+		map.put("registId", "1011847073964548098");
+		map.put("cardId", "1007212212750495746");
 		map.put("agentNo", "8620805971");
-		map.put("cardId", "1018768881217302530");
 		map.put("transAmount", "2");
 		map.put("system", "business_system");
 		map.put("oper", "gms");
